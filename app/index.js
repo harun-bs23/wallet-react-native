@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import Navigator from './routes/stackNavigator';
+import Stack from './routes/StackNavigator';
 
 export default class App extends Component {
     render() {
-        return <Navigator />;
+        return(
+        	<Stack/>
+        );
     }
 }

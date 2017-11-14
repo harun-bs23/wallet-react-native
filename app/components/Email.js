@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, TouchableHighlight, Text, StyleSheet } from 'react-native';
 
-export default class MobileNumber extends React.Component{
+export default class Email extends React.Component{
 	render(){
 			return(
 				<View style={styles.container}>
-					<Text>{ this.props.data.number }</Text>
+					<Text>{ this.props.data.email }</Text>
 					{
 					   this.props.data.verified === true ?	
 					   <Text>Verified</Text> : null 

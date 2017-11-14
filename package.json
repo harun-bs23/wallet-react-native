@@ -8,16 +8,13 @@
   "dependencies": {
     "expo": "16.0.0",
     "react": "16.0.0-alpha.6",
-    "react-moment": "0.2.4",
     "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
-    "react-native-country-picker-modal": "^0.3.0-rc1",
-    "react-native-device-info": "^0.10.2",
-    "react-native-elements": "0.13.0",
-    "react-native-infinite-scroll-view": "^0.4.2",
-    "react-native-loading-spinner-overlay": "^0.5.0",
-    "react-native-modal": "^2.4.0",
-    "react-native-picker-dropdown": "0.0.1",
-    "react-native-vector-icons": "^4.1.1",
+    "react-native-country-picker": "^1.0.2",
+    "react-native-dropdown": "0.0.6",
+    "react-native-elements": "^0.15.0",
+    "react-native-form": "^2.1.2",
+    "react-native-hamburger": "0.0.2",
+    "react-native-vector-icons": "^4.3.0",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git"
   },
   "devDependencies": {

@@ -1,213 +1,94 @@
-import { StackNavigator} from 'react-navigation'
+import React from 'react';
+import { StackNavigator } from 'react-navigation';
+import Login from '../screen/auth/Login';
+import SignUp from '../screen/auth/SignUp';
+import ForgotPassword from '../screen/auth/ForgotPassword';
+import Drawer from './DrawerNavigator';
 
-import Home from './drawerNavigator'
-import Login from './../screens/auth/login'
-import Signup from './../screens/auth/signup'
-import AuthVerifyMobile from './../screens/auth/verifyMobile'
-import ForgetPassword from './../screens/auth/forgetPassword'
-import BankAccounts from './../screens/withdraw/bankAccounts'
-import BitcoinAddresses from './../screens/withdraw/bitcoinAddresses'
-import WithdrawalAmountEntry from './../screens/withdraw/amountEntry'
-import SendMoney from './../screens/transfer/amountEntry'
-import SendTo from './../screens/transfer/sendTo'
-import QRcodeScanner from './../screens/transfer/qrcodeScanner'
-import AccountCurrencies from './../screens/accounts/accountCurrencies'
-import UploadImage from './../screens/settings/profileImage/uploadImage'
-import SettingsPersonalDetails from './../screens/settings/personalDetails'
-import SettingsMobileNumbers from './../screens/settings/mobileNumbers/mobileNumbers'
-import AddMobileNumber from './../screens/settings/mobileNumbers/addMobileNumber'
-import VerifyMobileNumber from './../screens/settings/mobileNumbers/verifyMobile'
-import SettingsEmailAddresses from './../screens/settings/emailAddresses/emailAddresses'
-import AddEmailAddress from './../screens/settings/emailAddresses/addEmailAddress'
-import SettingsGetVerified from './../screens/settings/getVerified/getVerified'
-import Document from './../screens/settings/getVerified/document'
-import DocumentUpload from './../screens/settings/getVerified/documentUpload'
-import SettingsAddress from './../screens/settings/address'
-import SettingsBankAccounts from './../screens/settings/bankAccounts/bankAccounts'
-import SettingsBitcoinAddresses from './../screens/settings/bitcoinAddresses/bitcoinAddresses'
-import AddBankAccount from './../screens/settings/bankAccounts/addBankAccount'
-import EditBankAccount from './../screens/settings/bankAccounts/editBankAccount'
-import AddBitcoinAddress from './../screens/settings/bitcoinAddresses/addBitcoinAddress'
-import EditBitcoinAddress from './../screens/settings/bitcoinAddresses/editBitcoinAddress'
-import SettingsCards from './../screens/settings/cards'
-import SettingsSecurity from './../screens/settings/security/security'
-import ChangePassword from './../screens/settings/security/changePassword'
-import TwoFactor from './../screens/settings/security/twoFactor'
-import SettingsNotifications from './../screens/settings/notifications/notifications'
-import EmailNotifications from './../screens/settings/notifications/emailNotifications'
-import MobileNotifications from './../screens/settings/notifications/mobileNotifications'
+import SettingProfileImage from '../screen/settings/settingProfileImage/SettingProfileImage';
+import UploadProfileImage from '../screen/settings/settingProfileImage/UploadProfileImage';
 
-const Stack = {
-  Home: {
-    screen: Home,
-  },
-  Login: {
-    screen: Login,
-  },
-  Signup: {
-    screen: Signup,
-  },
-  AuthVerifyMobile: {
-    screen: AuthVerifyMobile,
-  },
-  ForgetPassword: {
-    screen: ForgetPassword,
-  },
-  BankAccounts: {
-    screen: BankAccounts,
-  },
-  BitcoinAddresses: {
-    screen: BitcoinAddresses,
-  },
-  WithdrawalAmountEntry: {
-    screen: WithdrawalAmountEntry,
-  },
-  SendMoney: {
-    screen: SendMoney,
-  },
-  SendTo: {
-    screen: SendTo,
-  },
-  QRcodeScanner: {
-    screen: QRcodeScanner,
-  },
-  AccountCurrencies: {
-    screen: AccountCurrencies,
-  },
-  UploadImage: {
-    screen: UploadImage,
-  },
-  SettingsPersonalDetails: {
-    screen: SettingsPersonalDetails,
-  },
-  SettingsMobileNumbers: {
-    screen: SettingsMobileNumbers,
-  },
-  AddMobileNumber: {
-    screen: AddMobileNumber,
-  },
-  VerifyMobileNumber: {
-    screen: VerifyMobileNumber,
-  },
-  SettingsEmailAddresses: {
-    screen: SettingsEmailAddresses,
-  },
-  AddEmailAddress: {
-    screen: AddEmailAddress,
-  },
-  SettingsGetVerified: {
-    screen: SettingsGetVerified,
-  },
-  Document: {
-    screen: Document,
-  },
-  DocumentUpload: {
-    screen: DocumentUpload,
-  },
-  SettingsAddress: {
-    screen: SettingsAddress,
-  },
-  SettingsBankAccounts: {
-    screen: SettingsBankAccounts,
-  },
-  SettingsBitcoinAddresses: {
-    screen: SettingsBitcoinAddresses,
-  },
-  AddBankAccount: {
-    screen: AddBankAccount,
-  },
-  EditBankAccount: {
-    screen: EditBankAccount,
-  },
-  AddBitcoinAddress: {
-    screen: AddBitcoinAddress,
-  },
-  EditBitcoinAddress: {
-    screen: EditBitcoinAddress,
-  },
-  SettingsCards: {
-    screen: SettingsCards,
-  },
-  SettingsSecurity: {
-    screen: SettingsSecurity,
-  },
-  ChangePassword: {
-    screen: ChangePassword,
-  },
-  TwoFactor: {
-    screen: TwoFactor,
-  },
-  SettingsNotifications: {
-    screen: SettingsNotifications,
-  },
-  EmailNotifications: {
-    screen: EmailNotifications,
-  },
-  MobileNotifications: {
-    screen: MobileNotifications,
-  },
-}
+import SettingPersonalDetail from '../screen/settings/SettingPersonalDetail';
+import SettingMobileNumber from '../screen/settings/settingMobileNumber/SettingMobileNumber';
+import VerifyMobileNumber from '../screen/settings/settingMobileNumber/VerifyMobileNumber';
+import SettingEmailAddress from '../screen/settings/settingEmailAddress/SettingEmailAddress';
+import SettingSocialNetwork from '../screen/settings/SettingSocialNetwork';
+import SettingAddress from '../screen/settings/SettingAddress';
+import SettingBankAccount from '../screen/settings/settingBankAccount/SettingBankAccount';
+import SettingAddBankAccount from '../screen/settings/settingBankAccount/SettingAddBankAccount';
+import SettingCard from '../screen/settings/SettingCard';
+import SettingNotification from '../screen/settings/SettingNotification';
 
+import SettingGetVerified from '../screen/settings/settingGetVerified/SettingGetVerified';
+import ID_Document from '../screen/settings/settingGetVerified/ID_Document';
+import ID_Selfie from '../screen/settings/settingGetVerified/ID_Selfie';
+import Proof_of_address from '../screen/settings/settingGetVerified/Proof_of_address';
+import DocumentUpload from '../screen/settings/settingGetVerified/DocumentUpload';
 
-export default StackNavigator(Stack, {
-    headerMode: 'none',
-  })
-// export default StackNavigator({
-//   Home: {
-//     name: 'Home',
-//     screen: DrawerNavigator(
-//       DrawerRoutes,
-//         {
-//           navigationOptions: StackNavigationOptions,
-//         // contentComponent: (props) => (
-//         //   <View style={styles.container}>
-//         //     <DrawerHeader navigation={props.navigation} />
-//         //     <ScrollView >
-//         //       <DrawerOption name="Home" gotoAddress="Home" navigation={props.navigation} />
-//         //       <DrawerOption name="Deposit" gotoAddress="Deposit" navigation={props.navigation} />
-//         //       <DrawerOption name="Withdraw" gotoAddress="Withdraw" navigation={props.navigation} />
-//         //       <DrawerOption name="Receive" gotoAddress="Receive" navigation={props.navigation} />
-//         //       <DrawerOption name="Accounts" gotoAddress="Accounts" navigation={props.navigation} />
-//         //       <DrawerOption name="Settings" gotoAddress="Settings" navigation={props.navigation} />
-//         //       <DrawerOption name="About" gotoAddress="About" navigation={props.navigation} />
-//         //       <DrawerOption name="Logout" gotoAddress="Logout" navigation={props.navigation} />
-//         //     </ScrollView>
-//         //   </View>
-//         // ),
-//         contentComponent: (props) => (
-//           <View style={styles.container}>
-//             <DrawerHeader navigation={props.navigation} />
-//             <ScrollView >
-//               <DrawerItems
-//                 {...props}
-//                 activeTintColor="#6EBDF7"
-//                 activeBackgroundColor="#485159"
-//                 inactiveTintColor="white"
-//                 inactiveBackgroundColor="transparent"
-//                 labelStyle={{ margin: 15, alignItems: 'center', fontSize: 16, fontWeight: 'normal' }}
-//               />
-//             </ScrollView>
-//           </View>
-//         ),
-//       }
-//     ),
-//   },
-//   Stack: {
-//     screen: StackNavigator(Stack, {
-//       initialRouteName: 'Home',
-//       navigationOptions: StackNavigationOptions,
-//     }),
-//   },
-// },
-//   {
-//     headerMode: 'none',
-//   }
-// );
+import UploadIdDocument from '../screen/settings/settingGetVerified/UploadIdDocument';
+import UploadIdSelfie from '../screen/settings/settingGetVerified/UploadIdSelfie';
+import UploadProofOfAddress from '../screen/settings/settingGetVerified/UploadProofOfAddress';
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     flexDirection: 'column',
-//     backgroundColor: Colors.drawerColor,
-//   },
-// })
+import SettingBitcoinAddress from '../screen/settings/settingBitcoinAddress/SettingBitcoinAddress';
+import AddBitcoinAddress from '../screen/settings/settingBitcoinAddress/AddBitcoinAddress';
+
+import SettingSecurity from '../screen/settings/settingSecurity/Security';
+import Change_password from '../screen/settings/settingSecurity/Change_password';
+import Two_factor from '../screen/settings/settingSecurity/Two_factor';
+import Pin from '../screen/settings/settingSecurity/Pin';
+
+import WithdrawBankAccount from '../screen/withdraw/WithdrawBankAccount';
+import WithdrawBitcoinAddress from '../screen/withdraw/WithdrawBitcoinAddress';
+import WithdrawAddBitcoinAddress from '../screen/withdraw/WithdrawAddBitcoinAddress';
+import WithdrawAddBankAccount from '../screen/withdraw/WithdrawAddBankAccount';
+
+import Home_Send from '../screen/home/Home_Send';
+import Home_Send_To from '../screen/home/Home_Send_To';
+
+import PromotionsAmount from '../screen/promotions/PromotionsAmount';
+import SavePromotionsAmount from '../screen/promotions/SavePromotionsAmount';
+
+export default Stack = StackNavigator({
+    Login:{ screen: Login },
+    SignUp:{ screen: SignUp },
+    ForgotPassword:{ screen: ForgotPassword },
+    Drawer:{ screen: Drawer },
+    SettingProfileImage:{ screen: SettingProfileImage },
+    SettingPersonalDetail:{ screen: SettingPersonalDetail },
+    SettingMobileNumber:{ screen: SettingMobileNumber },
+    SettingEmailAddress:{ screen: SettingEmailAddress },
+    SettingSocialNetwork:{ screen: SettingSocialNetwork },
+    SettingGetVerified:{ screen: SettingGetVerified },
+    SettingAddress:{ screen: SettingAddress },
+    SettingBankAccount:{ screen: SettingBankAccount },
+    SettingBitcoinAddress:{ screen: SettingBitcoinAddress },
+    SettingCard:{ screen: SettingCard },
+    SettingSecurity:{ screen: SettingSecurity },
+    SettingNotification:{ screen: SettingNotification },
+    WithdrawBankAccount:{ screen: WithdrawBankAccount },
+    WithdrawBitcoinAddress:{ screen: WithdrawBitcoinAddress },
+    WithdrawAddBitcoinAddress:{ screen: WithdrawAddBitcoinAddress },
+    WithdrawAddBankAccount:{ screen: WithdrawAddBankAccount },
+    AddBitcoinAddress:{ screen: AddBitcoinAddress },
+    UploadIdDocument:{ screen: UploadIdDocument },
+    UploadIdSelfie:{ screen: UploadIdSelfie },
+    UploadProofOfAddress:{ screen: UploadProofOfAddress },
+    DocumentUpload:{ screen: DocumentUpload },
+    UploadProfileImage:{ screen: UploadProfileImage },
+    SettingAddBankAccount:{ screen: SettingAddBankAccount },
+    VerifyMobileNumber:{ screen: VerifyMobileNumber },
+
+    ID_Document:{ screen: ID_Document },
+    ID_Selfie:{ screen: ID_Selfie },
+    Proof_of_address:{ screen: Proof_of_address },
+
+    Change_password:{ screen: Change_password },
+    Two_factor:{ screen: Two_factor },
+    Pin:{ screen: Pin },
+
+    Home_Send:{ screen: Home_Send },
+    Home_Send_To:{ screen: Home_Send_To },
+    
+    PromotionsAmount:{ screen: PromotionsAmount },
+    SavePromotionsAmount:{ screen: SavePromotionsAmount },
+});
